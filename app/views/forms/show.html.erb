@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+
+<ul>
+  <li>
+    <%= @my_form.title %>
+  </li>
+  <li>
+    <%= @my_form.active %>
+  </li>
+  <li>
+    <%= @my_form.created_at%>
+  </li>
+</ul>
+<div>
+  <%= render 'form' ,my_form:@my_form %>
+</div>
+
+<div>
+  <%= link_to "Add Inputs", new_form_input_field_path(@my_form) %>
+</div>
+
+<div>
+  <%= link_to "Edit this form", edit_form_path(@my_form) %> |
+  <%= link_to "Back to forms", forms_path %>
+  <%= link_to "See Answers", form_answers_path(@my_form) %>
+
+  <%= button_to "Destroy this form", @my_form, method: :delete %>
+</div>

@@ -1,0 +1,12 @@
+<div>
+	<p style="font-weight: 600;"><%= field["label"] %></p>
+
+	<ul>
+		<% field["options"].each do |option| %>
+
+		<li style="font-weight: <%= option['id'].to_s == field['answer_value'].to_s ? 800 : 100 %>">
+			<%= option['name'] %>
+		</li>
+		<% end -%>
+	</ul>
+</div>

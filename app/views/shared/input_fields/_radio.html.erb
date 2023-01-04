@@ -1,0 +1,9 @@
+<label style="font-weight: 600" for="<%= input_field.label.underscore %>">
+	<%= input_field.label %>:
+</label>
+<fieldset>
+	<% input_field.options.each do |option| %>
+	  <input type="radio" id="<%= option.name %>" name="[answer]<%= input_field.slug %>" value="<%= option.id %>">
+	  <label for="<%= option.name %>" ><%= option.name %> </label>
+	<% end -%>
+</fieldset>

@@ -1,0 +1,7 @@
+<label style="font-weight: 600" for="<%= input_field.label.underscore %>">
+	<%= input_field.label %>:
+</label>
+</br>
+<input type="number" id="<%= input_field.label.underscore %>" name="[answer]<%= input_field.slug %>" <%= input_field.required ? 'required' : '' %> placeholder="<%= input_field.hint %>">
+</br>
+<hint style="font-weight: 100; font-style: italic;"><%= input_field.hint %></hint>

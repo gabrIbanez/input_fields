@@ -1,0 +1,12 @@
+<div id="<%= dom_id answer %>">
+  <p>
+    <strong>Answers: <%= answer.id %> </strong>
+    <ul>
+      <% answer.data.each do |field| %>
+        <li>
+          <%= render "shared/answers/#{field["input_type"]}", field: field %>
+        </li>
+      <% end %>
+    </ul>
+  </p>
+</div>

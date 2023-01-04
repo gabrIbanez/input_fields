@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Input fields</h1>
+
+<div id="input_fields">
+  <% @input_fields.each do |input_field| %>
+    <p>
+      <%= input_field.type %>
+    </p>
+    <p>
+      <%= input_field.label %>
+    </p>
+    <p>
+      <%= input_field.created_at %>
+    </p>
+    <p>
+      <%= link_to "Edit this input field", edit_form_input_field_path(@my_form, input_field) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New input field", new_form_input_field_path(@my_form) %>

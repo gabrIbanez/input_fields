@@ -1,0 +1,2 @@
+module InputFieldsHelper
+end

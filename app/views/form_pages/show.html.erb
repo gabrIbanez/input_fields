@@ -1,0 +1,20 @@
+<div class="container">
+	<h1><%= @my_form.title %> </h1>
+
+	<ul>
+		<%= form_with(url: form_pages_path(form_id: @my_form.id), remote: false) do |form| %>
+
+			<% @my_form.input_fields.each do |input_field|  %>
+				<input type="hidden" name="[id]" value="<%= @my_form.id %>">
+				<li>
+					<div>
+						<%= render "shared/input_fields/#{input_field.input_name}", input_field: input_field  %>
+					</div>
+				</li>
+			<% end -%>
+
+		<%= form.submit %>
+
+		<% end %>
+	</ul>
+</div>

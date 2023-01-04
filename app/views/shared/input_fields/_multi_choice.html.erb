@@ -1,0 +1,28 @@
+<label style="font-weight: 600" for="<%= input_field.label.underscore %>">
+	<%= input_field.label %>:
+</label>
+<fieldset>
+	<% input_field.options.each do |option| %>
+	  <input type="checkbox" name="[answer]<%= input_field.slug %>[]" value="<%= option.id %>" onclick="return ValidatePetSelection();">
+	  <label for="<%= option.name %>" ><%= option.name %> </label>
+	<% end -%>
+</fieldset>
+
+
+<script type="text/javascript">  
+function ValidatePetSelection()  
+{  
+    var checkboxes = document.getElementsByName("[answer]<%= input_field.slug %>");  
+    var numberOfCheckedItems = 0;  
+    for(var i = 0; i < checkboxes.length; i++)  
+    {  
+        if(checkboxes[i].checked)  
+            numberOfCheckedItems++;  
+    }  
+    if(numberOfCheckedItems > 2)  
+    {  
+        alert("You can't select more than two favorite pets!");  
+        return false;  
+    }  
+}  
+</script>

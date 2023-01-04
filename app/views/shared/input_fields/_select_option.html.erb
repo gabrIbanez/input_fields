@@ -1,0 +1,9 @@
+<label for="<%= input_field.label %>"><%= input_field.label %> :</label>
+</br>
+<select name="[answer]<%= input_field.slug %>" id="<%= input_field.label %>_select">
+	<% input_field.options.each do |option| %>
+  	<option value="<%= option.id %>">
+  		<%= option.name %>
+  	</option>
+  <% end -%>
+</select>

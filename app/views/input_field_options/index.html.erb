@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Input field options</h1>
+
+<div id="input_field_options">
+  <% @input_field_options.each do |input_field_option| %>
+    <%= render input_field_option %>
+    <p>
+      <%= link_to "Show this input field option", input_field_option %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New input field option", new_input_field_option_path %>

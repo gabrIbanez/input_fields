@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @input_field_option %>
+
+<div>
+  <%= link_to "Edit this input field option", edit_input_field_option_path(@input_field_option) %> |
+  <%= link_to "Back to input field options", input_field_options_path %>
+
+  <%= button_to "Destroy this input field option", @input_field_option, method: :delete %>
+</div>

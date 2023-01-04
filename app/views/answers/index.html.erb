@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Answers: <%= @my_form.title %> </h1>
+
+<div id="answers">
+  <ul>
+    <% @answers.each do |answer| %>
+      <li>
+        <%= render answer %>
+        <p>
+          <%= link_to "Show this answer", form_answer_path(@my_form, answer) %>
+        </p>
+      </li>
+    <% end %>
+  </ul>
+</div>

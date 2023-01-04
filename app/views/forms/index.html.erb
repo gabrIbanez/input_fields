@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Forms</h1>
+
+<div id="forms">
+  <% @my_forms.each do |form| %>
+    <p>
+      <%= form.title %>
+    </p>
+    <p>
+      <%= link_to "Show this form", form %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New form", new_form_path %>

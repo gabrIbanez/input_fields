@@ -1,0 +1,5 @@
+<h1>Index page</h1>
+
+<% Form.all.each do |form| %>
+	<%= link_to "Répondre à: #{form.title}", form_page_path(form) %>
+<% end %>
